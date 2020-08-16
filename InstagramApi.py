@@ -126,7 +126,7 @@ class   InstagramBot:
             return("following succesfuly ")
         else:
             return("Already following !")
-
+        return "Done"
 
 
 
@@ -143,6 +143,7 @@ class   InstagramBot:
              print('Unfollowing @' + user['username'])
              self.api.unfollow(user['pk'])
              sleep(20)
+        return "Done"          
 
 
 
@@ -168,7 +169,7 @@ class   InstagramBot:
             else:
                  print(user['username']+' is following you !')
                  sleep(10)
-
+        return "Done"
 
        
 
@@ -218,6 +219,12 @@ class   InstagramBot:
         
 
 app = Flask(__name__)
+
+#HOME
+@app.route('/')
+def home():
+    return "Hello ### Zineddine ###"
+
 
 #LOGIN
 @app.route('/login/<username>/<password>')
@@ -271,65 +278,4 @@ def unfollowpeople(username,password):
     return auth.unfollowpeople() 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# username = "zineddine_haddad"
-# passworrd = "0698918467"
-# api = InstagramAPI(username,passworrd)
-# api.login()
-
-
-
-# api.searchUsername(username)
-# result = api.LastJson   #GET INFO ABOUT CURRENT USER
-# username_id = result['user']['pk']
-
-# user_posts = api.getUserFeed(username_id)  #GET USER FEED
-# result = api.LastJson
-
-# media_id = result['items'][0]['id']
-# api.getMediaComments(media_id) # Get users who liked
-# comments = api.LastJson['comments']
-
-
-
 
