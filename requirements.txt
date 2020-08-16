@@ -1,0 +1,15 @@
+click==7.1.2
+decorator==4.0.11
+Flask==1.1.2
+imageio==2.1.2
+InstagramAPI==1.0.2
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+moviepy==0.2.3.2
+numpy==1.19.1
+Pillow==7.2.0
+requests==2.11.1
+requests-toolbelt==0.7.0
+tqdm==4.11.2
+Werkzeug==1.0.1
